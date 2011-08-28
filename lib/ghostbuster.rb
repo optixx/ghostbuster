@@ -11,7 +11,7 @@ class Ghostbuster
     @paths.flatten!
     @dir = File.directory?(@paths[0]) ? @paths[0] : File.dirname(@paths[0])
     @ghost_lib = File.expand_path(File.join(File.dirname(__FILE__), "ghostbuster.coffee"))
-    @phantom_bin = File.join(ENV['HOME'], '.ghostbuster', 'phantomjs')
+    @phantom_bin = './phantomjs'
   end
 
   def run
